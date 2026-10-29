@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="styles.css?v=5">
 </head>
 <body>
 
@@ -59,12 +59,18 @@
 
 <!-- HERO -->
 <section class="hero" data-hero>
-  <div class="hero-media">
-    <img src="img/fachada.jpg" alt="Fachada do Santa Julia à noite, com o letreiro iluminado na esquina da Gomes de Carvalho" class="hero-img hero-img--dim">
-    <img src="img/fachada.jpg" alt="" class="hero-img hero-img--lit" aria-hidden="true">
+  <div class="hero-wall" aria-label="Vídeos da casa: fachada, pista, shows, drinks e a galera">
+    <div class="hero-col"><video src="video/hero-a.mp4" poster="video/hero-a.jpg" autoplay muted loop playsinline preload="auto"></video></div>
+    <div class="hero-col"><video src="video/hero-b.mp4" poster="video/hero-b.jpg" autoplay muted loop playsinline preload="auto"></video></div>
+    <div class="hero-col"><video src="video/hero-c.mp4" poster="video/hero-c.jpg" autoplay muted loop playsinline preload="auto"></video></div>
   </div>
   <div class="hero-shade"></div>
-  <svg class="hero-halo" viewBox="0 0 600 200" aria-hidden="true"><ellipse cx="300" cy="100" rx="270" ry="58"/></svg>
+
+  <div class="sticker" aria-hidden="true">
+    <svg viewBox="0 0 200 200"><defs><path id="ring" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+      <text><textPath href="#ring">SANTIFICADO SEJA · DESDE 2010 · VILA OLÍMPIA · </textPath></text></svg>
+    <img src="img/asas.png" alt="">
+  </div>
 
   <div class="hero-content">
     <p class="eyebrow hero-eyebrow"><span class="dot"></span><span data-status>Vila Olímpia · desde 2010</span></p>
@@ -86,18 +92,32 @@
   </div>
 
   <div class="hero-foot">
-    <span>Rua Gomes de Carvalho, 1705</span>
+    <span>Rua Gomes de Carvalho, 1705 · Vila Olímpia</span>
     <span class="scroll-cue">Role pra entrar <i></i></span>
   </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Almoço</span><img src="img/asas.png" alt=""><span>Happy hour</span><img src="img/asas.png" alt=""><span>Balada</span><img src="img/asas.png" alt=""><span>Feijoada do Santinha</span><img src="img/asas.png" alt=""><span>Eventos corporativos</span><img src="img/asas.png" alt=""><span>Sertanejo, pagode e samba</span><img src="img/asas.png" alt="">
-    <span>Almoço</span><img src="img/asas.png" alt=""><span>Happy hour</span><img src="img/asas.png" alt=""><span>Balada</span><img src="img/asas.png" alt=""><span>Feijoada do Santinha</span><img src="img/asas.png" alt=""><span>Eventos corporativos</span><img src="img/asas.png" alt=""><span>Sertanejo, pagode e samba</span><img src="img/asas.png" alt="">
-  </div>
+<!-- FITAS CRUZADAS -->
+<div class="tapes" aria-hidden="true">
+  <div class="tape tape--a"><div class="tape-track">
+    <span>Santa Julia</span><b>✦</b><span>Vila Olímpia</span><b>✦</b><span>Sertanejo, pagode e samba</span><b>✦</b><span>Seg a sáb</span><b>✦</b><span>Santa Julia</span><b>✦</b><span>Vila Olímpia</span><b>✦</b><span>Sertanejo, pagode e samba</span><b>✦</b><span>Seg a sáb</span><b>✦</b>
+  </div></div>
+  <div class="tape tape--b"><div class="tape-track">
+    <span>Almoço</span><img src="img/asas.png" alt=""><span>Happy hour</span><img src="img/asas.png" alt=""><span>Balada</span><img src="img/asas.png" alt=""><span>Feijoada do Santinha</span><img src="img/asas.png" alt=""><span>Eventos</span><img src="img/asas.png" alt=""><span>Almoço</span><img src="img/asas.png" alt=""><span>Happy hour</span><img src="img/asas.png" alt=""><span>Balada</span><img src="img/asas.png" alt=""><span>Feijoada do Santinha</span><img src="img/asas.png" alt=""><span>Eventos</span><img src="img/asas.png" alt="">
+  </div></div>
 </div>
+
+<!-- ENTRADA PELAS LETRAS -->
+<section class="portal" data-portal aria-label="Desde 2010">
+  <div class="portal-pin">
+    <div class="portal-wall">
+      <video src="video/hero-c.mp4" poster="video/hero-c.jpg" muted loop playsinline preload="metadata"></video>
+      <video src="video/hero-a.mp4" poster="video/hero-a.jpg" muted loop playsinline preload="metadata"></video>
+      <video src="video/hero-b.mp4" poster="video/hero-b.jpg" muted loop playsinline preload="metadata"></video>
+    </div>
+    <div class="portal-mask"><span>Desde</span><span>2010</span></div>
+  </div>
+</section>
 
 <!-- HISTÓRIA -->
 <section class="story" id="historia">
@@ -152,75 +172,100 @@
 <!-- EXPERIÊNCIAS -->
 <section class="xp" id="experiencias">
   <div class="xp-intro">
-    <p class="eyebrow">Tudo que dá pra viver aqui</p>
-    <h2 class="h2">Uma casa,<br>sete <em>experiências</em></h2>
+    <h2 class="xp-big"><span>Uma casa.</span><span class="out">Sete</span><span class="gold">experiências.</span></h2>
   </div>
-  <div class="xp-pin">
-    <div class="xp-track">
-      <article class="xp-card">
-        <div class="xp-img"><img src="img/buffet.jpg" alt="Buffet do almoço com saladas, pratos quentes e churrasco" loading="lazy"></div>
-        <div class="xp-body">
-          <p class="xp-num">01 · Seg a sex, 11h30 às 15h</p>
-          <h3>Almoço buffet</h3>
-          <p>O melhor almoço da Vila Olímpia, com sobremesa por nossa conta. Saladas, massas, pratos típicos e opções à la carte.</p>
-          <ul class="xp-facts"><li><b>R$ 54,90</b> buffet livre com churrasco</li><li><b>R$ 109,90</b> o quilo</li><li><b>10% off</b> no quilo pra empresa cadastrada</li></ul>
+  <div class="panels">
+    <article class="panel">
+      <div class="panel-bg"><img src="img/buffet.jpg" alt="Buffet do almoço" loading="lazy"></div>
+      <div class="panel-in">
+        <div class="panel-copy">
+          <p class="panel-when"><span>01</span>Seg a sex · 11h30 às 15h</p>
+          <h3 class="panel-title">Almoço<br>buffet</h3>
+          <p class="panel-text">O melhor almoço da Vila Olímpia, com sobremesa por nossa conta. Saladas, massas, pratos típicos e à la carte.</p>
+          <ul class="panel-facts"><li><b>R$ 54,90</b>buffet livre com churrasco</li><li><b>R$ 109,90</b>o quilo</li><li><b>10% off</b>no quilo pra empresa cadastrada</li></ul>
+          <a href="#reserva" class="panel-link" data-occasion="Almoço">Reservar almoço</a>
         </div>
-      </article>
-      <article class="xp-card">
-        <div class="xp-img"><img src="img/amstel.jpg" alt="Chopp Amstel sendo tirado na chopeira" loading="lazy"></div>
-        <div class="xp-body">
-          <p class="xp-num">02 · Seg a sex, a partir das 15h</p>
-          <h3>Happy hour</h3>
-          <p>Música ao vivo, atendimento privilegiado e promoção que não acaba. O happy hour mais completo da Vila Olímpia.</p>
-          <ul class="xp-facts"><li><b>R$ 89,90</b> porção de boteco + 4 chopps</li><li><b>R$ 8,90</b> o chopp Amstel</li></ul>
+        <div class="panel-inset"><img src="img/petisco.jpg" alt="Porção de boteco com fritas" loading="lazy"></div>
+      </div>
+    </article>
+    <article class="panel panel--yellow">
+      <div class="panel-bg"><img src="img/salao-cheio.jpg" alt="Salão cheio no happy hour" loading="lazy"></div>
+      <div class="panel-in">
+        <div class="panel-copy">
+          <p class="panel-when"><span>02</span>Seg a sex · a partir das 15h</p>
+          <h3 class="panel-title">Happy<br>hour</h3>
+          <p class="panel-text">Música ao vivo, atendimento privilegiado e promoção que não acaba.</p>
+          <ul class="panel-facts"><li><b>R$ 89,90</b>porção de boteco + 4 chopps</li><li><b>R$ 8,90</b>o chopp Amstel</li></ul>
+          <a href="#promocoes" class="panel-link">Ver promoções</a>
         </div>
-      </article>
-      <article class="xp-card xp-card--video">
-        <div class="xp-img"><video src="video/sabado.mp4" muted loop playsinline preload="none" poster="img/roda.jpg"></video></div>
-        <div class="xp-body">
-          <p class="xp-num">03 · Sábado, 13h às 02h</p>
-          <h3>Feijoada do Santinha</h3>
-          <p>11 anos da melhor feijoada da Vila Olímpia. Quatro bandas ao vivo com samba, pagode e sertanejo, e DJ nos intervalos.</p>
-          <ul class="xp-facts"><li><b>Open chopp</b> com a feijoada</li><li><b>Compre 3, leve 4</b> no balde de 600ml</li></ul>
+        <div class="panel-inset"><img src="img/amstel.jpg" alt="Chopp Amstel na chopeira" loading="lazy"></div>
+      </div>
+    </article>
+    <article class="panel">
+      <div class="panel-bg"><img src="img/roda.jpg" alt="Roda de samba no sábado" loading="lazy"></div>
+      <div class="panel-in">
+        <div class="panel-copy">
+          <p class="panel-when"><span>03</span>Sábado · 13h às 02h</p>
+          <h3 class="panel-title">Feijoada do<br>Santinha</h3>
+          <p class="panel-text">11 anos da melhor feijoada da Vila Olímpia. Quatro bandas ao vivo com samba, pagode e sertanejo, e DJ nos intervalos.</p>
+          <ul class="panel-facts"><li><b>Open chopp</b>com a feijoada</li><li><b>Compre 3, leve 4</b>no balde 600ml</li></ul>
+          <a href="#reserva" class="panel-link" data-occasion="Feijoada de sábado">Reservar o sábado</a>
         </div>
-      </article>
-      <article class="xp-card">
-        <div class="xp-img"><img src="img/aniversario.jpg" alt="Aniversariante com balões dourados de número 33 em frente ao neon Santificado Seja" loading="lazy"></div>
-        <div class="xp-body">
-          <p class="xp-num">04 · Todo dia é dia</p>
-          <h3>Santo aniversário</h3>
-          <p>Aniversariante no Santa Julia ganha. Entrada VIP, convite digital, pulseira exclusiva e garrafa pra quem trouxer a galera.</p>
-          <a href="#aniversario" class="xp-link">Ver o que você ganha</a>
+        <div class="panel-inset"><video src="video/sabado.mp4" muted loop playsinline preload="none" poster="img/roda.jpg"></video></div>
+      </div>
+    </article>
+    <article class="panel">
+      <div class="panel-bg"><img src="img/niver-mesa.jpg" alt="Aniversário com bolo e velas" loading="lazy"></div>
+      <div class="panel-in">
+        <div class="panel-copy">
+          <p class="panel-when"><span>04</span>Todo dia é dia</p>
+          <h3 class="panel-title">Santo<br>aniversário</h3>
+          <p class="panel-text">Aniversariante no Santa Julia ganha entrada VIP, convite digital, pulseira exclusiva e garrafa pra quem trouxer a galera.</p>
+          
+          <a href="#aniversario" class="panel-link">Ver o que você ganha</a>
         </div>
-      </article>
-      <article class="xp-card">
-        <div class="xp-img"><img src="img/mezanino-2.jpg" alt="Mezanino com lounges, cordões de camarote e vista pra rua" loading="lazy"></div>
-        <div class="xp-body">
-          <p class="xp-num">05 · Até 250 pessoas</p>
-          <h3>Evento corporativo</h3>
-          <p>Mezanino privativo com bar, banheiros e área de fumantes exclusivos, acesso direto à cozinha e layout do seu jeito.</p>
-          <a href="#eventos" class="xp-link">Pedir orçamento</a>
+        <div class="panel-inset"><img src="img/aniversario.jpg" alt="Aniversariante com balões dourados no neon" loading="lazy"></div>
+      </div>
+    </article>
+    <article class="panel panel--light">
+      <div class="panel-bg"><img src="img/mezanino-wide.jpg" alt="Mezanino montado pra evento" loading="lazy"></div>
+      <div class="panel-in">
+        <div class="panel-copy">
+          <p class="panel-when"><span>05</span>Até 250 pessoas</p>
+          <h3 class="panel-title">Evento<br>corporativo</h3>
+          <p class="panel-text">Mezanino privativo com bar, banheiros e área de fumantes exclusivos, acesso direto à cozinha e layout do seu jeito.</p>
+          
+          <a href="#eventos" class="panel-link">Pedir orçamento</a>
         </div>
-      </article>
-      <article class="xp-card">
-        <div class="xp-img"><img src="img/balde.jpg" alt="Garrafa de cerveja virada na boca no meio da festa" loading="lazy"></div>
-        <div class="xp-body">
-          <p class="xp-num">06 · Pra 10 convidados</p>
-          <h3>Camarote</h3>
-          <p>A área mais exclusiva da Vila Olímpia. R$ 2.000 totalmente consumíveis, com lugar pra 10 pessoas. A gente manda o mapa pra você escolher.</p>
-          <a href="#reserva" class="xp-link" data-occasion="Camarote">Escolher meu camarote</a>
+        <div class="panel-inset"><img src="img/mezanino-2.jpg" alt="Lounges do mezanino" loading="lazy"></div>
+      </div>
+    </article>
+    <article class="panel">
+      <div class="panel-bg"><img src="img/pista.jpg" alt="Pista cheia" loading="lazy"></div>
+      <div class="panel-in">
+        <div class="panel-copy">
+          <p class="panel-when"><span>06</span>Pra 10 convidados</p>
+          <h3 class="panel-title">Camarote</h3>
+          <p class="panel-text">A área mais exclusiva da Vila Olímpia. R$ 2.000 totalmente consumíveis. A gente manda o mapa pra você escolher o seu.</p>
+          
+          <a href="#reserva" class="panel-link" data-occasion="Camarote">Escolher meu camarote</a>
         </div>
-      </article>
-      <article class="xp-card">
-        <div class="xp-img"><img src="img/niver-sushi.jpg" alt="Comemoração em frente ao sushi bar da casa" loading="lazy"></div>
-        <div class="xp-body">
-          <p class="xp-num">07 · Dentro da casa</p>
-          <h3>Santa Temakeria</h3>
-          <p>Tem sushi bar aqui dentro. Temaki no meio do happy hour, sim, pode.</p>
-          <a href="https://dguests.com/cardapio/barsantajulia" target="_blank" rel="noopener" class="xp-link">Ver o cardápio</a>
+        <div class="panel-inset"><img src="img/combo.jpg" alt="Combo de whisky com energético no balde iluminado" loading="lazy"></div>
+      </div>
+    </article>
+    <article class="panel panel--yellow">
+      <div class="panel-bg"><img src="img/niver-sushi.jpg" alt="Sushi bar da casa" loading="lazy"></div>
+      <div class="panel-in">
+        <div class="panel-copy">
+          <p class="panel-when"><span>07</span>Dentro da casa</p>
+          <h3 class="panel-title">Santa<br>Temakeria</h3>
+          <p class="panel-text">Tem sushi bar aqui dentro. Temaki no meio do happy hour, sim, pode.</p>
+          
+          <a href="https://dguests.com/cardapio/barsantajulia" target="_blank" rel="noopener" class="panel-link">Ver o cardápio</a>
         </div>
-      </article>
-    </div>
+        <div class="panel-inset"><img src="img/drink-amarelo.jpg" alt="Drink amarelo na taça" loading="lazy"></div>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -448,6 +493,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-<script src="main.js?v=2"></script>
+<script src="main.js?v=3"></script>
 </body>
 </html>
